@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Manrope';
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+
+    
+
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative; 
+    right: 10%;
+   
+   
+}
+
+
+.pageOne img{
+    height:350px;
+    width: 500px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: block;
+  
+  
+}
+
+.pageTwo {
+    
+    background: white;
+    height: 350px;
+    width: 480px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 80%; 
+    padding: 30px 30px;
+   
+}
+.first{
+    margin-top: 20px;
+    color: hsl(217, 19%, 35%);
+    font-weight:700;
+    font-size: 24px;
+
+    
+    
+}
+.second{
+    font-size: 15px;
+    color:  hsl(214, 17%, 51%);
+    font-weight: 500;
+    margin-top: 20px;
+    
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 30px;
+    
+    
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    width: 300px;
+
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.profile .one{
+    padding: 10px;
+    font-size: 14px;
+    line-height: normal;
+  
+}
+
+.share-btn img{
+    
+    width: 16px;
+    height: 16px;
+  
+   
+ 
+}
+.share-btn {
+    background: hsl(217, 19%, 35%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+     /* Ensures the bottom sheet is positioned relative to the button */
+}
+.share-btnTwo{
+    display:none;
+}
+
+.bottom-sheet {
+    position: absolute;
+    bottom: calc(22% + 20px);
+    right: 0;
+    background: hsl(217, 19%, 35%);
+    /* color: white; */
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    visibility: hidden; /* Initially hidden */
+    transform: translateX(50px); /* Move it slightly outside the container */
+}
+
+.bottom-sheet.hidden {
+    visibility: hidden;
+}
+
+.bottom-sheet.visible {
+    visibility: visible; /* Visible when the button is clicked */
+}
+
+.bottom-sheet ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+
+}
+
+.bottom-sheet li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    cursor: pointer;
+    
+}
+
+.bottom-sheet li img {
+    width: 16px;
+    height: 16px;
+}
+
+.bottom-sheet::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position the arrow just below the bottom sheet */
+    left: 50%; /* Center the arrow */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%); /* Arrow color matches the bottom sheet */
+}
+
+
+    
+   
+        
+    @media only screen and (max-width: 600px) {
+
+        body{
+            min-height: 0;
+            margin: 20%;
+        }
+        .container {
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            gap: 0; 
+            position: relative; 
+            right: 0; 
+           
+            
+           
+            
+        }
+    
+        .pageOne img {
+            width: 400px; 
+            height: auto; 
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+           
+        }
+       
+    
+        .pageTwo {
+            width: 400px;     
+            padding: 30px 20px;
+            background: white;
+            left: 0;
+            top: 83%;
+            height: auto;
+            border-top-right-radius: 0;
+            border-bottom-right-radius:0;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+          
+            
+        }
+
+        .first{
+           
+            margin-top: 10px;
+            font-size: 21px;
+            font-weight: 700;
+        }
+        
+
+        .second{
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.5;
+            
+            
+           
+        }
+
+       .section{
+        margin-top: 30px;
+       }
+        .profile .one{
+            padding: 10px;
+           
+          
+        }
+    
+        .profile {
+            width: 270px;
+           
+        }
+    
+      
+    
+        .share-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background: hsl(210, 46%, 95%) ;
+        }
+
+        .share-btnTwo{
+            display: block;
+            background: hsl(210, 46%, 95%) ;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-left: 90px;
+        }
+    
+       
+
+        .bottom-sheet {
+            position: absolute;
+            bottom: calc(12% + 10px);
+            width: 400px;
+            background: hsl(217, 19%, 35%);
+            padding: 10px 20px;
+            border-radius: 0;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            visibility: hidden; 
+            transform: translateY(50px);
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            height: 90px;
+        }
+    
+        .bottom-sheet ul {
+            flex-direction: row; 
+            gap: 20px; 
+            align-items: center; 
+            padding: 10px;
+          
+           
+        }
+
+    
+        .bottom-sheet li img {
+            margin: 0 auto;
+            width: 25px;
+           
+        }
+      
+    
+        .bottom-sheet::after {
+            display: none; 
+        }
+    }
+    
+
