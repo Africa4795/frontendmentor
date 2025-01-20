@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(235, 18%, 26%);
+    min-height: 100vh;
+   
+}
+
+.container{
+    display: flex;
+   
+    padding: 15px;
+    margin: 20px;
+    background-color: hsl(0, 0%, 100%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.PartOne{
+    height: 400px;
+    padding: 20px;
+    width: 400px;
+}
+
+
+.PartOne  p{
+    margin-top: 18px;
+    font-size: 16px;
+    
+}
+
+ li{
+   list-style-type: none;
+  
+}
+.page{
+    margin-top: 15px;
+    font-size:16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+    
+}
+
+ .page img{
+    width: 14px;
+    
+} 
+.one{
+  padding-left: 10px;
+}
+
+
+
+.yes{
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: left;
+    width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+  
+    
+}
+
+
+
+button{
+    margin-top: 20px;
+    width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:hsl(234, 29%, 20%);
+    border: none;
+    color:hsl(0, 0%, 100%) ;
+}
+
+
+.imgOne{
+    height: 500px;
+   
+  
+}
+
+.imgTwo{
+    display: none;
+}
+
+
+
+
+
+/* Set body background when modal is active */
+body.modal-active {
+    background-color: hsl(235, 18%, 26%);
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Hide the container when modal is active */
+  body.modal-active .container {
+    display: none;
+  }
+  
+  /* Modal styles */
+  #modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; /* Modal background */
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    width: 400px;
+    
+    z-index: 1000;
+  }
+  
+  /* Modal content styles */
+  #success-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  #modal p {
+    margin: 10px 0;
+    color: hsl(234, 29%, 20%); /* Darker text for better readability */
+  }
+  
+  /* Dismiss button styles */
+  #dismissButton {
+    background-color: hsl(4, 100%, 67%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #dismissButton:hover {
+    background-color: hsl(4, 90%, 57%);
+  }
+  
+  /* Hidden class to hide elements */
+  .hidden {
+    display: none;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+
+
+#email.error {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.1); /* Light red background */
+  }
+
+.formLabel{
+    display: flex;
+    justify-content:space-between;
+    width: 350px;
+}
+.formLabel  p{
+  color: hsl(235, 18%, 26%);
+  font-weight: 500;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  body{
+    
+    background-color: black;
+}
+  .container{
+    flex-direction:column-reverse;
+    
+    width: 390px;
+    height: 720px;;
+    
+    padding-top: 20px;
+    border-radius: 0;
+  
+      
+  
+  }
+
+  .imgOne{
+    display: none;
+   
+}
+
+.imgTwo{
+  display: none;
+  width: 390px;
+  display: block;
+  height: 300px;
+
+  
+}
+.PartOne{
+  padding: 18px;
+  width: 380px;
+  height: 450px;
+
+}
+.one{
+  font-size: 16px;
+  
+}
+#subscriptionForm{
+  margin-top: 10px;
+ 
+}
+.yes{
+  width: 330px;
+}
+button{
+  width: 330px;
+  padding: 20px;
+  font-weight: 700;
+}
+.PartOne h1{
+  color: hsl(235, 18%, 26%);
+  font-weight: 700;
+}
+.attribution{
+  display: none;
+}
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white; /* Modal background */
+  padding: 30px 30px;
+  border-radius: 0;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  width: 380px;
+  height: 750px;
+  z-index: 1000;
+}
+
+#modal h1{
+  margin-top: 20px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 700;
+}
+
+
+
+#success-image{
+  margin-top: 100px;
+  left: 0;
+  width: 70px;
+  height: 70px;
+}
+#modal p{
+  margin-top: 20px;
+}
+
+#dismissButton{
+  margin-top: 240px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color:hsl(235, 18%, 26%); ;
+}
+
+
+
+}
