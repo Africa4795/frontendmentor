@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img src="images/logo.svg" alt="hello">
+  <div class="container">
+    <div class="first_page">
+      <h3>Bill</h3>
+      <div class="input_container">
+          <img class="first_dollar" src="images/icon-dollar.svg" alt="hello">
+          <input   type="search"  id="billAmount"   placeholder="0" >
+      </div>
+      
+      <h3 class="second_h3">Select Tip %</h3>
+      <div class="button_container">
+       <button>5%</button> 
+       <button>10%</button> 
+       <button>15%</button> 
+       <button>25%</button> 
+       <button>50%</button> 
+       
+       <input class="custom"   type="search" id="customTip" placeholder="Custom">
+        
+      </div>
+
+      <h3 class="third_h3">Number of People<span id="peopleError" class="error-message"></span></h3>
+      <div class="input_container">
+        <img  class="first_person" src="images/icon-person.svg" alt="hello">
+        <input type="search" id="numPeople" placeholder="0">
+      </div>
+    </div>
+
+    <div class="second_page">
+      <div class="first_second_page">
+        <div class="second_second_page">
+          <h3>Tip Amount </h3>
+          <h4>/ person</h4>
+        </div>
+        <div class="second_second_page">
+          <h2 id="tipAmount">$0.00</h2>
+        </div>
+      </div>
+
+      <div class="first_second_page">
+        <div class="second_second_page">
+          <h3>Total</h3>
+          <h4>/ person</h4>
+        </div>
+        <div class="second_second_page">
+          <h2 id="totalAmount">$0.00</h2>
+        </div>
+      </div>
+      <button id="reset" class="second_page_button">Reset</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: hsl(185, 41%, 84%);
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Space Mono;
+}
+
+.container{
+    display: flex;
+    background: hsl(0, 0%, 100%);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin-top: 50px;
+}
+.first_page{
+    width: 320px;
+    height: 300px;
+    padding:10px;
+    margin-top: 5px;
+    
+}
+
+.first_page > h3{
+    color:hsl(186, 14%, 43%);
+    font-size: 12px;
+    font-family: Space Mono;
+    
+}
+.input_container{
+    position: relative;
+    display: inline-flex;
+}
+.input_container > .first_dollar{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+}
+.input_container > input{
+    width: 250px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 2px;
+    text-align: right;
+    padding: 8px 10px 8px 10px;
+    margin-top: 5px;
+    color: hsl(186, 14%, 43%);
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+.input_container > input:focus{
+    outline: 2px solid hsl(172, 67%, 45%); /* Custom green outline */
+}
+
+.input_container > input::placeholder{
+    color: hsl(185, 41%, 84%);
+    font-size: 24px;
+    font-family: Space Mono;
+    font-weight: 700;
+    
+}
+
+.first_page > .second_h3{
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: Space Mono;
+}
+.button_container{
+    width: 200px;
+   display: grid;
+   grid-template-columns:repeat(3, 1fr);
+   gap: 10px;
+   margin-top: 5px;
+  
+}
+.button_container > button{
+    padding: 8px 18px 8px 18px;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 500px;
+    font-size: 16px;
+    font-family: Space Mono;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.button_container > button:hover{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.button_container button.active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.button_container > .custom{
+    background-color:  hsl(189, 41%, 97%);
+    color:hsl(186, 14%, 43%);
+    font-weight:bolder;
+    font-size: 24px;
+    font-family: Space Mono;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 8px;
+    border-radius: 3px;
+  
+}
+.button_container > input::placeholder{
+    text-align: center;
+    padding: 50px;
+    right: 0;
+}
+
+.button_container > .custom:focus{
+    outline: 2px solid hsl(172, 67%, 45%); /* Custom green outline */
+}
+
+
+.first_page > .third_h3{
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: Space Mono;
+}
+
+.input_container >.first_person{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+}
+
+.second_page{
+    background-color: hsl(183, 100%, 15%);
+    width: 280px;
+    height: 300px;
+    border-radius: 10px;
+    padding:20px;
+    
+   
+}
+
+.first_second_page{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.second_second_page > h3{
+    color: hsl(185, 41%, 84%);
+    font-size: 12px;
+    font-family: Space Mono;
+
+}
+
+.second_second_page > h4{
+    font-size: 10px;
+    color: hsl(184, 14%, 56%)
+}
+
+
+.second_second_page >  h2{
+    color:  hsl(172, 67%, 45%);
+    font-size: 24px;
+
+}
+
+
+.second_page_button{
+    margin-top: 100px;
+    padding: 10px 50px 10px 50px;
+    width: 230px;
+    background: hsl(183, 97%, 24%);
+    color: hsl(183, 93%, 21%);
+    border: none;
+    font-weight: 1000;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Error message style */
+.error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 35px;
+    display: none; /* Hidden by default */
+}
+
+
+/* mobile screen */
+@media only screen and (max-width: 600px) {
+    
+    
+    .container{
+        flex-direction:column ;
+        max-width: 600px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        
+        
+    }
+    
+    
+    
+    .input_container > input{
+        width: 300px;
+    }
+    .button_container{
+        width: 300px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .first_page  > h3 {
+        font-size: 15px;
+    }
+    .first_page  > .second_h3 {
+        font-size: 15px;
+    }
+    .first_page > .third_h3{
+        font-size: 15px;
+    }
+    .button_container > .custom{
+        width: 150px;
+        border-radius: 2px;
+        text-align: center;
+        color: hsl(183, 93%, 21%);
+        font-weight: 700;
+        
+    }
+
+    .second_page{
+        margin-top: 80px;
+        width: 300px;
+        height: 220px;
+    }
+
+    .second_page_button{
+        margin-top: 25px;
+        background-color:  hsl(172, 67%, 45%);
+        width: 260px;
+        font-size: 18px;
+    }
+
+
+
+
+
+}
